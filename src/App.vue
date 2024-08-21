@@ -17,9 +17,11 @@ function add(data) { // harus sama dengan yang ada di FormTodo
 </script>
 
 <template>
-  <!-- <h1 v-bind:style="{color: green}">Hello World {{ hello }}</h1> -->
-   <section class="wrapper">
-    <FormTodo  @add-todo="add"/> <!-- ini menggunakan component -->
+  <!-- <h1 v-bind:style="{color: green}">Hello World {{ hello }}</h1>   -->
+   <section class="wrapper"> 
+    <!-- @addTodo atau add-todo dapat dari formtodo $emit('addTodo') -->
+    <!-- <FormTodo  @addTodo="add"/>  -->
+    <FormTodo  @add-todo="add"/> 
    </section>
 </template>
 

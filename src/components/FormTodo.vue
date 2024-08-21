@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'; 
-const todo = ref('');
+const todoo = ref(''); // ngikut ke parent todos dari app.vue
 
 function clear() { // mnghapus data formnya ketika data todonya berhasil di tambahkan
     todo.value = "";
@@ -8,11 +8,11 @@ function clear() { // mnghapus data formnya ketika data todonya berhasil di tamb
 </script> 
 
 <template>
-    <form @:submit.prevent="$emit('addTodo', {todo, clear})">
+    <form @:submit.prevent="$emit('addTodo', {todoo, clear})">
         <h1 class="title">Todo</h1>
         <div class="form-control">
             <label for="todo">Todo :</label>
-            <input type="text" name="" v-model="todo" id="todo" placeholder="your todo...." required>
+            <input type="text" v-model="todo" id="todo" placeholder="your todo...." required>
         </div>
         <div style="text-align: end;">
             <button>Add</button>
